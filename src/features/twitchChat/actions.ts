@@ -6,6 +6,7 @@ export interface Userstate {
   broadcaster?: boolean;
   subscriber?: boolean;
   vip?: boolean;
+  replyParent: string;
 }
 
 export const urlReceived = createAction<{ url: string; userstate: Userstate }>('twitchChat/urlReceived');

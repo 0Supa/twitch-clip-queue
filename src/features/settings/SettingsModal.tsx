@@ -72,6 +72,7 @@ function SettingsModal({ closeModal }: { closeModal: () => void }) {
               <Stack spacing="sm">
                 <Text size="sm">Clip providers</Text>
                 <Chips multiple {...form.getInputProps('enabledProviders')}>
+                  <Chip value="supa-codes">supa8 mirrors</Chip>
                   <Chip value="twitch-clip">Twitch Clips</Chip>
                   <Chip value="twitch-vod">Twitch Videos / VODs</Chip>
                   <Chip value="youtube">YouTube</Chip>

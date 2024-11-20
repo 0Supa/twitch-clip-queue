@@ -32,7 +32,10 @@ const createClipQueueMiddleware = (): Middleware<{}, RootState> => {
         clipProvider.setProviders(action.payload.providers);
       } else if (urlReceived.match(action)) {
         const { url, userstate } = action.payload;
-        const sender = userstate.username;
+        let sender = userstate.username;
+        if (sender === "supa8" && userstate.replyParent) {
+          sender = userstate.replyParent;
+        }
         if (storeAPI.getState().clipQueue.isOpen) {
           const id = clipProvider.getIdFromUrl(url);
           if (id) {

@@ -1,5 +1,6 @@
 import { createLogger } from '../../../common/logging';
 import { Clip } from '../clipQueueSlice';
+import supaCodesProvider from './supa.codes/supaCodesProvider';
 import afreecaClipProvider from './afreecaClip/afreecaClipProvider';
 import streamableProvider from './streamable/streamableProvider';
 import twitchClipProvider from './twitchClip/twitchClipProvider';
@@ -20,6 +21,7 @@ export interface ClipProvider {
 class CombinedClipProvider implements ClipProvider {
   name = 'combined';
   providers = {
+    [supaCodesProvider.name]: supaCodesProvider,
     [twitchClipProvider.name]: twitchClipProvider,
     [twitchVodProvider.name]: twitchVodProvider,
     [youtubeProvider.name]: youtubeProvider,

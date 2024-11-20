@@ -48,6 +48,7 @@ const handleMessage =
       subscriber: chatUserstate.subscriber,
       broadcaster: chatUserstate.badges?.broadcaster ? true : undefined,
       vip: chatUserstate.badges?.vip ? true : undefined,
+      replyParent: chatUserstate["reply-parent-display-name"] ?? chatUserstate["reply-parent-user-login"]
     };
 
     if (message.startsWith(commandPrefix)) {

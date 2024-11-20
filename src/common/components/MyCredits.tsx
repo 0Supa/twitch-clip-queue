@@ -1,5 +1,5 @@
 import { Group, Text } from '@mantine/core';
-import { BrandTwitch, BrandGithub } from 'tabler-icons-react';
+import { BrandTwitch, BrandGithub, Heart } from 'tabler-icons-react';
 import BrandButton from './BrandButton';
 
 function MyCredits() {
@@ -10,9 +10,9 @@ function MyCredits() {
         <BrandButton href="https://github.com/JakeMiki" icon={<BrandGithub size={16} />}>
           JakeMiki
         </BrandButton>
-        <div>/</div>
-        <BrandButton href="https://www.twitch.tv/SirMuffin9" icon={<BrandTwitch size={16} />}>
-          SirMuffin9
+        <div>& forked by</div>
+        <BrandButton href="https://supa.sh" icon={<Heart size={16} />}>
+          Supa
         </BrandButton>
       </Group>
     </Text>

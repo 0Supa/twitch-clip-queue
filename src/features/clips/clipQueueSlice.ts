@@ -46,7 +46,7 @@ const initialState: ClipQueueState = {
   queueIds: [],
   historyIds: [],
   watchedClipCount: 0,
-  providers: ['twitch-clip', 'twitch-vod', 'youtube'],
+  providers: ['supa-codes', 'twitch-clip', 'twitch-vod', 'youtube'],
   layout: 'classic',
   isOpen: false,
   autoplay: false,
